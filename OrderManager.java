@@ -8,7 +8,7 @@ public class OrderManager {
     public void addOrder(String customer, String order) {
         customers.add(customer);
         orders.add(order);
-        System.out.println("Order added for " + customer);
+        System.out.println("Order added for: " + customer);
     }
 
     public void listOrders() {
