@@ -1,26 +1,38 @@
 import java.util.ArrayList;
 import java.util.List;
 
+// Class to manage orders
 public class OrderManager {
-    private List customers = new ArrayList<>();
-    private List orders = new ArrayList<>();
+    private List<String> customers = new ArrayList<>();
+    private List<String> orders = new ArrayList<>();
 
+    // Constant for initial index
+    private static final int INITIAL_INDEX = 0;
+
+    /**
+     * Adds an order for a customer.
+     * @param customer the name of the customer
+     * @param order the order details
+     */
     public void addOrder(String customer, String order) {
         customers.add(customer);
         orders.add(order);
         System.out.println("Order added for: " + customer);
     }
 
-    public void listOrders() {
-        for (int i = 0; i < orders.size(); i++) {
-            System.out.println("Customer: " + customers.get(i) + ", Order: " + orders.get(i));
-        }
+    /**
+     * Returns the list of customers.
+     * @return list of customers
+     */
+    public List<String> getCustomers() {
+        return customers;
     }
 
-    public static void main(String[] args) {
-        OrderManager om = new OrderManager();
-        om.addOrder("Alice", "Laptop");
-        om.addOrder("Bob", "Phone");
-        om.listOrders();
+    /**
+     * Returns the list of orders.
+     * @return list of orders
+     */
+    public List<String> getOrders() {
+        return orders;
     }
 }
