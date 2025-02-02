@@ -7,7 +7,7 @@ public class OrderManager {
     private List<String> orders = new ArrayList<>();
 
     // Constant for initial index
-    private static final int INITIAL_INDEX = 0;
+    public static final int INITIAL_INDEX = 0;
 
     /**
      * Adds an order for a customer.
